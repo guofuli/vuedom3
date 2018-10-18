@@ -1,30 +1,26 @@
-# vuedom3
+前言
 
-> A Vue.js project
+初学vue项目，做的练习，适合新手
 
-## Build Setup
+技术栈
 
-``` bash
-# install dependencies
-npm install
+vue2 + vuex + vue-router + webpack +json
 
-# serve with hot reload at localhost:8080
-npm run dev
+项目运行
+git clone https://github.com/guofuli/vueProject
+git clone https://github.com/guofuli/vuedom3.git
 
-# build for production with minification
-npm run build
+1、首先允许server，打开命令窗口  https://github.com/guofuli/vueProject
 
-# build for production and view the bundle analyzer report
-npm run build --report
+ 1、进入  cd server
+ 
+ 2、 npm install
+ 
+ 3、 npm  run server
+2、再打开一个新的名称窗口，进入到vuedom3目录 vuedom3参照https://github.com/guofuli/vuedom3.git
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+ 1、 cd vuedom3
+ 
+ 2、 npm install
+ 
+ 3、 npm run dev (注： 这个是在package.json文件配置的)
