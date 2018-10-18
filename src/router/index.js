@@ -3,10 +3,10 @@ import Router from 'vue-router'
 import layout from '@/components/layout'
 import indexPage from '../pages/index'
 import DetailPage from '../pages/detail'
-import DetailAnaPage from '../pages/detail/analysis'
-import DetailCouPage from '../pages/detail/count'
-import DetailForPage from '../pages/detail/forecast'
-import DetailPubPage from '../pages/detail/publish'
+import analysisPage from '../pages/detail/analysis'
+import countPage from '../pages/detail/count'
+import forecastPage from '../pages/detail/forecast'
+import publishPage from '../pages/detail/publish'
 
 Vue.use(Router)
 
@@ -21,23 +21,23 @@ export default new Router({
     {
       path: '/detail',
       component: DetailPage,
-      redirect: '/count',
+      redirect: '/detail/analysis',
       children:[
         {
-		    path: '/analysis',
-		    component: DetailAnaPage
+		    path: 'analysis',
+		    component: analysisPage
 		},
 		{
-			path: '/count',
-			component: DetailCouPage
+			path: 'count',
+			component: countPage
 		},
 		{
-			path: '/forecast',
-			component: DetailForPage
+			path: 'forecast',
+			component: forecastPage
 		},
 		{
-			path: '/publish',
-			component: DetailPubPage
+			path: 'publish',
+			component: publishPage
 		}]	
     }
   ]

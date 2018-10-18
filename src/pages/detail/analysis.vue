@@ -10,6 +10,7 @@
                   购买数量：
               </div>
               <div class="sales-board-line-right">
+                <!-- 下拉选择，左右加减按钮 -->
                 <v-counter @on-change="onParamChange('buyNum',$event)"></v-counter>
               </div>
           </div>
@@ -18,6 +19,7 @@
                   产品类型：
               </div>
               <div class="sales-board-line-right">
+                <!-- 下拉按钮多项选择 -->
                 <v-selection :selection="buyTypes" @on-change="onParamChange('buyType',$event)"></v-selection>
               </div>
           </div>
@@ -25,8 +27,10 @@
               <div class="sales-board-line-left">
                   有效时间：
               </div>
+              <!-- 单项选择 -->
               <div class="sales-board-line-right">
                 <v-chooser :selections="periodList" @on-change="onParamChange('period',$event)"></v-chooser>
+                <!-- 官方文档里面，$event 等于$emit 抛出的值，还可以使用$event.target.value -->
               </div>
           </div>
           <div class="sales-board-line">
@@ -34,6 +38,7 @@
                   产品版本：
               </div>
               <div class="sales-board-line-right">
+                <!-- 多项选择 -->
                 <multiply-chooser :selections="versionList" @on-change="onParamChange('versions',$event)"></multiply-chooser>
               </div>
           </div>
@@ -199,7 +204,7 @@
         this.getPrice()
       },
       getPrice(){
-        let buyVersionsArray = _.map(this.versions,(item)=>{
+        let buyVersionsArray = _.map(this.versions,(item) =>{
           
           return item.value
         })
@@ -230,6 +235,7 @@
         this.bankId = val.id
       },
       confirmBuy(){
+        /*_.map  lodash*/
         let buyVersionsArray = _.map(this.versions,(item)=>{
           return item.value
         })

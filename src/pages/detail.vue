@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="detail-left">
       <div class="product-board">
-      <img :src="productIcon"> 
+      <img :src="productIcon">
         <ul>
         	<router-link v-for="item in products" :to="{path:item.path}" tag="li" active-class="active">
         		{{item.name}}
@@ -23,7 +23,7 @@
 	export default {
 		data(){
 			return{
-				products: [
+				products: [ 
 			        {
 			          name: '数据统计',
 			          path: 'count',
@@ -45,19 +45,20 @@
 			          path: 'publish',
 			          active: false
 			        }
-			    ],
-			    imgMap: {
-			        '/count': require("../assets/images/1.png"),
-			        '/forecast': require("../assets/images/2.png"),
-			        '/analysis': require("../assets/images/3.png"),
-			        '/publish': require("../assets/images/4.png")
-			    }
+			    ], 
+			  imgMap: {
+			        '/detail/count': require("../assets/images/1.png"),
+			        '/detail/forecast': require("../assets/images/2.png"),
+			        '/detail/analysis': require("../assets/images/3.png"),
+			        '/detail/publish': require("../assets/images/4.png")
+			   }
 
 			}
 		},
 		computed:{
 			productIcon(){
 				return this.imgMap[this.$route.path]
+
 			}
 		}
 	   

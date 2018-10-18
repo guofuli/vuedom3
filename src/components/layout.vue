@@ -23,8 +23,9 @@
 
     <!-- container-start -->
     <div class="container">
-      <keep-alive>
+      <keep-alive><!-- 缓存 -->
         <router-view></router-view>
+        <!--  定义显示部分，就是点击后，匹配的内容显示在什么地方 -->
       </keep-alive>
     </div>
     <!-- container-end -->
@@ -115,7 +116,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, f  igcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
 }

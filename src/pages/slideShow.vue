@@ -90,7 +90,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped>  /* scoped 表示是局部的*/
 .slide-trans-enter-active {
   transition: all .5s;
 }
